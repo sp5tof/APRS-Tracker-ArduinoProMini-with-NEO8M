@@ -10,7 +10,8 @@ This project will be developed.
 I would like to add AFSK packet analyzer and oled display.
 However, LibAPRS library supports only AVR family uC. ESP32 doesn't support atomic commands being used by this library. 
 That's why Arduino Pro Mini is a must with this project (ESP32 is probably possible but requires additional DAC module).
-[aprs_prototype](https://github.com/user-attachments/assets/5c9d440e-6a64-40f4-afdf-2611a7b04d9a)
+
+![aprs_prototype](https://github.com/user-attachments/assets/40e736f6-90e2-47d5-a0e7-e9b05a96ee4d)
 
 Kuba/SP5TOF!
 
