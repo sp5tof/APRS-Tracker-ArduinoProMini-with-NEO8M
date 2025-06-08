@@ -2,7 +2,7 @@
 This project is based on Billy's project : https://github.com/billygr/arduino-aprs-tracker .
 More informations: https://www.billy.gr/arduino-aprs-tracker/
 
-I changed two things related to genuine project:
+I changed few things related to genuine project:
 - support for NEO8M GPS module (TinyGPS library has to be changed, I added the modified library here)
 - small change made on original Billy's arduino code related to GPS module
 - I used Arduino Pro mini in 5V version and adopted author's code to use this one
