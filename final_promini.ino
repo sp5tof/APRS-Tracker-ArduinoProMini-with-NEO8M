@@ -285,7 +285,7 @@ void locationUpdate() {
 //Source: APRS protocol
 //Which means /A=000XXXArduino APRS Tracker (29 characters)
 
-  char comment []= "Arduino APRS Tracker;
+  char comment []= "Arduino APRS Tracker";
   char temp[8];
   char APRS_comment [32]="/A=";
 
