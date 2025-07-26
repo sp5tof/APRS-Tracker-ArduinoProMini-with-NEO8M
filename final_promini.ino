@@ -17,11 +17,12 @@
 
 // Manual update button
 #define BUTTON_PIN 10
+#define BUTTON_PIN2 9
 
 // GPS SoftwareSerial
 // Shares pins with (MISO 12/ MOSI 11) used for SPI
-#define GPS_RX_PIN 12
-#define GPS_TX_PIN 11
+#define GPS_RX_PIN 11
+#define GPS_TX_PIN 12
 TinyGPS gps;
 SoftwareSerial GPSSerial(GPS_RX_PIN, GPS_TX_PIN);
 
@@ -84,12 +85,21 @@ void setup()
   // Reduce NMEA messages
   disableGPGLL();
   pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_PIN2, INPUT_PULLUP); //symbol select 
   pinMode(GPS_FIX_LED,OUTPUT);
 
   Serial.println(F("Arduino APRS Tracker"));
 
   APRS_init(ADC_REFERENCE, OPEN_SQUELCH);
   APRS_setCallsign(APRS_CALLSIGN,APRS_SSID);
+
+  //symbol choosing
+ if (digitalRead(BUTTON_PIN2)==0)
+    {
+      Serial.println(F("Symbol changed to the walking man"));
+      char APRS_SYMBOL = '[';
+    }
+
   APRS_setSymbol(APRS_SYMBOL);
 
   Serial.print(F("Callsign:     ")); Serial.print(APRS_CALLSIGN); Serial.print(F("-")); Serial.println(APRS_SSID);
@@ -285,7 +295,7 @@ void locationUpdate() {
 //Source: APRS protocol
 //Which means /A=000XXXArduino APRS Tracker (29 characters)
 
-  char comment []= "Arduino APRS Tracker";
+  char comment []= "145.500 Kuba";
   char temp[8];
   char APRS_comment [32]="/A=";
 
