@@ -17,6 +17,7 @@
 
 // Manual update button
 #define BUTTON_PIN 10
+// button for select the symbol between the car and walking man
 #define BUTTON_PIN2 9
 
 // GPS SoftwareSerial
@@ -94,7 +95,7 @@ void setup()
   APRS_setCallsign(APRS_CALLSIGN,APRS_SSID);
 
   //symbol choosing
- if (digitalRead(BUTTON_PIN2)==0)
+ if (digitalRead(BUTTON_PIN2)==LOW)
     {
       Serial.println(F("Symbol changed to the walking man"));
       char APRS_SYMBOL = '[';
