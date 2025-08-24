@@ -3,7 +3,7 @@
  * Install the following libraries through Arduino Library Manager
  * - TinyGPS by Mikal Hart
  * -
- * -
+ * - Modified by Jakub/SP5TOF for additional button of symbol changing & NEO8M GPS receiver support 
  ***/
 
 #include <SoftwareSerial.h>
@@ -40,7 +40,7 @@ SoftwareSerial GPSSerial(GPS_RX_PIN, GPS_TX_PIN);
 // APRS settings
 char APRS_CALLSIGN[] = "SP5TOF";
 const int APRS_SSID = 5;
-char APRS_SYMBOL = '>';
+
 
 
 // SmartBeaconing(tm) Setting  http://www.hamhud.net/hh2/smartbeacon.html implementation by LU5EFN
@@ -85,8 +85,13 @@ void setup()
 
   // Reduce NMEA messages
   disableGPGLL();
+  // pin for manual update
   pinMode(BUTTON_PIN, INPUT_PULLUP);
-  pinMode(BUTTON_PIN2, INPUT_PULLUP); //symbol select 
+   //symbol select 
+  pinMode (BUTTON_PIN2, INPUT_PULLUP);
+char APRS_SYMBOL = '>';
+char APRS_SYMBOL2 = '[';
+
   pinMode(GPS_FIX_LED,OUTPUT);
 
   Serial.println(F("Arduino APRS Tracker"));
@@ -94,14 +99,15 @@ void setup()
   APRS_init(ADC_REFERENCE, OPEN_SQUELCH);
   APRS_setCallsign(APRS_CALLSIGN,APRS_SSID);
 
-  //symbol choosing
- if (digitalRead(BUTTON_PIN2)==LOW)
+if (digitalRead(BUTTON_PIN2)==LOW)
     {
       Serial.println(F("Symbol changed to the walking man"));
-      char APRS_SYMBOL = '[';
+       APRS_setSymbol(APRS_SYMBOL2);
     }
-
-  APRS_setSymbol(APRS_SYMBOL);
+    else
+    {
+      APRS_setSymbol(APRS_SYMBOL);
+    }
 
   Serial.print(F("Callsign:     ")); Serial.print(APRS_CALLSIGN); Serial.print(F("-")); Serial.println(APRS_SSID);
   Serial.print(F("Free RAM:     ")); Serial.println(freeMemory());
@@ -296,11 +302,7 @@ void locationUpdate() {
 //Source: APRS protocol
 //Which means /A=000XXXArduino APRS Tracker (29 characters)
 
-char comment []= "Skoda w trasie";
-  if(APRS_SYMBOL == '[')
-    {
-    char comment [] = "Walking man";
-    }
+char comment []= "SP5TOF w trasie";
   
   char temp[8];
   char APRS_comment [32]="/A=";
