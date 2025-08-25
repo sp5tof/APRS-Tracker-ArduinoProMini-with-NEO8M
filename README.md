@@ -5,6 +5,10 @@ This project is based on:
 - ESP32 iGate project https://github.com/nakhonthai/ESP32APRS_Audio
 
 It consists of two independent uC: Arduino Pro-Mini for TNC transmition and ESP-Wroom32 with OLED board for visual decoding incoming APRS frames.
+This is becouse I wasn't able to force Atmega328p with Arduino bootloader to decode any AX.25 frames using the another decoder idea :
+https://github.com/chokelive/aprs_tnc .
+From the other hand, ESP32 iGate standalone project doesn't seem to support the NEO8M GPS receiver. 
+That's why I decided to use hybrid solution consists of two independent microprocessors.
 
 Attached Eagle STL/BRD PCB allows to put them all together.
 
