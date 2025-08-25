@@ -18,7 +18,7 @@ I changed few things related to genuine project(Arduino Pro-Mini part):
 
 I added external speaker with embedded preamp to the circuit as you can see on the schema. Baofeng turns off it's internal speaker when the mini-jack is plugged in. The idea behind the external speaker is about possibility of listening incoming APRS frames. Unfortunatelly, two audio receivers on the DAC output of esp32 makes overriding the audio line. That's why I had to add the audio splitter based on TL072.
   
-Cable required for connecting the Baofeng with the device you have to make on your own. I wasn't able to find fully compatible 4-pins (MIC, SPK, PTT, GND) cable with any well-known online stores. However, you can try to order the baofeng audio cable from chinese online store, but the additional changes will have to be made according the the attached schema.
+Cable required for connecting the Baofeng with the device you have to make on your own. I wasn't able to find fully compatible 4-pins (MIC, SPK, PTT, GND) cable with any well-known online stores. However, you can try to order the baofeng audio cable from chinese online store, but the additional changes will have to be made according the the attached schema and pinout available in the net, f. ex : https://www.miklor.com/COM/images/dualplug.jpg .
 
 In case of ESP32 part, please follow the manual within the link mentioned above on the nakhonthai github page. 
 You have to flash the ESP board. You don't need to configure anything within the ESP32. 
