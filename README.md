@@ -14,10 +14,10 @@ I changed few things related to genuine project(Arduino Pro-Mini part):
   
 Cable required for connecting the Baofeng with the device you have to make on your own. I wasn't able to find fully compatible 4-pins (MIC, SPK, PTT, GND) cable with any well-known online stores. However, you can try to order the baofeng audio cable from chinese online store, but the additional changes will have to be made according the the attached schema.
 
-In case od ESP32 part, please follow the manual within the link mentioned above within the nakhonthai github page. 
-You have to flash the ESP board with the firmware attached. You don't need to configure anything within the ESP32. 
+In case of ESP32 part, please follow the manual within the link mentioned above on the nakhonthai github page. 
+You have to flash the ESP board. You don't need to configure anything within the ESP32. 
 Decoding functionality which is used in this project, works by default without any additional configurations steps to be performed.
-I used the ESP-WROOM32 with embedded OLED display, which works correctly.
+I used the ESP-WROOM32 board with embedded OLED display, which works correctly(with version 13a of firmware version, added to this library. However, please use the newest available release on the nakhonthai github page, which should works correctly).
 
 ![aprs_prototype](https://github.com/user-attachments/assets/40e736f6-90e2-47d5-a0e7-e9b05a96ee4d)
 
