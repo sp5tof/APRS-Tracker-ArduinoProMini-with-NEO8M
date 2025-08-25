@@ -25,5 +25,5 @@ I used the ESP-WROOM32 board with embedded OLED display, which works correctly(w
 
 ![aprs_prototype](https://github.com/user-attachments/assets/40e736f6-90e2-47d5-a0e7-e9b05a96ee4d)
 
-Kuba/SP5TOF!
+                                                                                                                                                            Kuba/SP5TOF
 
