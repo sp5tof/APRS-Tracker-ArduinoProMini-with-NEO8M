@@ -1,4 +1,4 @@
-# APRS Tracker/Decoder based on ArduinoProMini, ESP32 & NEO8M GPS receiver module
+# APRS Tracker/Decoder for Baofeng based on ArduinoProMini, ESP32 & NEO8M GPS receiver module
 This project is based on:
 
 - Billy's project : https://github.com/billygr/arduino-aprs-tracker  - more informations: https://www.billy.gr/arduino-aprs-tracker/ &
@@ -15,6 +15,8 @@ I changed few things related to genuine project(Arduino Pro-Mini part):
 - small change made on original Billy's arduino code related to GPS module
 - I used Arduino Pro mini in 5V version and adopted author's code to use this one
 - added additional button for changing the APRS symbol(pressing it during the powering ON the device would change the symbol from "car" to "walking man")
+
+I added external speaker with embedded preamp to the circuit as you can see on the schema. Baofeng turns off it's internal speaker when the mini-jack is plugged in. The idea behind the external speaker is about possibility of listening incoming APRS frames. Unfortunatelly, two audio receivers on the DAC output of esp32 makes overriding the audio line. That's why I had to add the audio splitter based on TL072.
   
 Cable required for connecting the Baofeng with the device you have to make on your own. I wasn't able to find fully compatible 4-pins (MIC, SPK, PTT, GND) cable with any well-known online stores. However, you can try to order the baofeng audio cable from chinese online store, but the additional changes will have to be made according the the attached schema.
 
