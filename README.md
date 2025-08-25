@@ -24,6 +24,5 @@ Decoding functionality which is used in this project, works by default without a
 I used the ESP-WROOM32 board with embedded OLED display, which works correctly(with version 13a of firmware version, added to this library. However, please use the newest available release on the nakhonthai github page, which should works correctly).
 
 ![aprs_prototype](https://github.com/user-attachments/assets/40e736f6-90e2-47d5-a0e7-e9b05a96ee4d)
-
-                                                                                                                                                            Kuba/SP5TOF
+                                                                                               Kuba/SP5TOF
 
