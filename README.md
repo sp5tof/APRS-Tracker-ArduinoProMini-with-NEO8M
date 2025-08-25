@@ -8,7 +8,7 @@ It consists of two independent uC: Arduino Pro-Mini for TNC transmition and ESP-
 
 Attached Eagle STL/BRD PCB allows to put them all together.
 
-Baofeng is used as transceiver for this project and connected with two embedded mini-jacks for TX/RX datas & PTT triggering.
+Baofeng is used as transceiver for this project and connected with two embedded mini-jacks sockets for TX/RX datas & PTT triggering.
 
 I changed few things related to genuine project(Arduino Pro-Mini part):
 - support for NEO8M GPS module (TinyGPS library has to be changed, I added the modified library here)
