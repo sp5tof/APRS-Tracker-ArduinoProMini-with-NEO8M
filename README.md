@@ -1,4 +1,4 @@
-# APRS-Tracker-ArduinoProMini-with-NEO8M v1.0
+# APRS Tracker/Decoder based on ArduinoProMini, ESP32 & NEO8M GPS receiver module
 This project is based on:
 
 - Billy's project : https://github.com/billygr/arduino-aprs-tracker  - more informations: https://www.billy.gr/arduino-aprs-tracker/ &
