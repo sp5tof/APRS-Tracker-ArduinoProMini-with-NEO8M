@@ -1,9 +1,13 @@
 # APRS-Tracker-ArduinoProMini-with-NEO8M v1.0
-This project is based on Billy's project : https://github.com/billygr/arduino-aprs-tracker & ESP32 iGate project https://github.com/nakhonthai/ESP32APRS_Audio
-More informations: https://www.billy.gr/arduino-aprs-tracker/ .
+This project is based on:
+
+- Billy's project : https://github.com/billygr/arduino-aprs-tracker  - more informations: https://www.billy.gr/arduino-aprs-tracker/ &
+- ESP32 iGate project https://github.com/nakhonthai/ESP32APRS_Audio
 
 It consists of two independent uC: Arduino Pro-Mini for TNC transmition and ESP-Wroom32 with OLED board for visual decoding incoming APRS frames.
+
 Attached Eagle STL/BRD PCB allows to put them all together.
+
 Baofeng is used as transceiver for this project and connected with two embedded mini-jacks for TX/RX datas & PTT triggering.
 
 I changed few things related to genuine project(Arduino Pro-Mini part):
