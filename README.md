@@ -23,6 +23,11 @@ You have to flash the ESP board. You don't need to configure anything within the
 Decoding functionality which is used in this project, works by default without any additional configurations steps to be performed.
 I used the ESP-WROOM32 board with embedded OLED display, which works correctly(with version 13a of firmware version, added to this library. However, please use the newest available release on the nakhonthai github page, which should works correctly).
 
-![aprs_prototype](https://github.com/user-attachments/assets/40e736f6-90e2-47d5-a0e7-e9b05a96ee4d)
-                                                                                               Kuba/SP5TOF
+                                                                                                                                                                        
+![schema_image](https://github.com/user-attachments/assets/8e901f95-b1e4-4ba8-80e8-92f2afaf1ac3)
+
+![PCB_image](https://github.com/user-attachments/assets/b106d10e-09aa-4f99-9879-f867900a0ea8)
+![mounted_schema](https://github.com/user-attachments/assets/3950e0fa-d971-49de-a89d-20bfd5b899d6)
+
+ Kuba/SP5TOF
 
