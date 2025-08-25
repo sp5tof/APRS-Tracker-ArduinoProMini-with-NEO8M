@@ -20,6 +20,9 @@ I added external speaker with embedded preamp to the circuit as you can see on t
   
 Cable required for connecting the Baofeng with the device you have to make on your own. I wasn't able to find fully compatible 4-pins (MIC, SPK, PTT, GND) cable with any well-known online stores. However, you can try to order the baofeng audio cable from chinese online store, but the additional changes will have to be made according the the attached schema and pinout available in the net, f. ex : https://www.miklor.com/COM/images/dualplug.jpg .
 
+For Arduino part, please compile and upload attached .ino code to the Arduino Pro-Mini.
+Make necessary changes within the code according to your preferences (callsing, comment etc.).
+
 In case of ESP32 part, please follow the manual within the link mentioned above on the nakhonthai github page. 
 You have to flash the ESP board. You don't need to configure anything within the ESP32. 
 Decoding functionality which is used in this project, works by default without any additional configurations steps to be performed.
